@@ -2,7 +2,7 @@
 
 _Level: foundation — Enterprise Campus & LAN — Subinterfaces · 802.1Q Encapsulation · Inter-VLAN Routing_
 
-**Status: In progress.** A work-in-progress snapshot; the project is not complete.
+**Status: Verified.** Completed on 2026-11-21; every requirement was machine-checked against the network built in BuildTheNet and passed.
 
 Snapshot taken 2026-11-21. Built in a simulation — no physical or production equipment was involved.
 
@@ -20,12 +20,21 @@ Router-on-a-stick is the cheapest inter-VLAN routing there is, and it is the con
 |---|---|---|---|
 | 1 | Trunk the link between the switch and the router. | Passed | Sandbox check |
 | 2 | Create one subinterface per VLAN with dot1Q encapsulation. | Passed | Sandbox check |
-| 3 | Give each subinterface the gateway address for its VLAN. | Not yet passing | Sandbox check |
-| 4 | Confirm a host in one VLAN reaches a host in another. | Not yet passing | Sandbox check |
+| 3 | Give each subinterface the gateway address for its VLAN. | Passed | Sandbox check |
+| 4 | Confirm a host in one VLAN reaches a host in another. | Passed | Sandbox check |
 
 ## Topology
 
 ![Topology diagram](topology.svg)
+
+## Addressing
+
+| Device | Interface | Address | Mask | Mode | Gateway |
+|---|---|---|---|---|---|
+| Router-1 | Gi0/0.10 | 192.168.1.2/24 | 255.255.255.0 | routed |  |
+| Router-1 | Gi0/0.20 | 192.168.2.2/24 | 255.255.255.0 | routed |  |
+| PC-1 | Eth0 | 192.168.1.4/24 | 255.255.255.0 | VLAN 1 | 192.168.1.2 |
+| PC-2 | Eth0 | 192.168.2.4/24 | 255.255.255.0 | VLAN 1 | 192.168.2.2 |
 
 ## Device configurations
 

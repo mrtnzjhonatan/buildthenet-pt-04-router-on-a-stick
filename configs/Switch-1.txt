@@ -12,14 +12,17 @@ vlan 20
 interface Fa0/1
  no shutdown
  switchport mode trunk
+ switchport trunk allowed vlan 10,20
 !
 interface Fa0/2
  no shutdown
  switchport mode access
+ switchport access vlan 10
 !
 interface Fa0/3
  no shutdown
  switchport mode access
+ switchport access vlan 20
 !
 interface Fa0/4
  no shutdown
@@ -116,4 +119,5 @@ interface Gi0/2
 interface Console
  no shutdown
  switchport mode access
+ip default-gateway 192.168.1.2
 end
