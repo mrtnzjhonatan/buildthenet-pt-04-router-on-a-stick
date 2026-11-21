@@ -1,0 +1,119 @@
+Current configuration : 1842 bytes
+version 15.0
+service timestamps debug datetime msec
+service timestamps log datetime msec
+hostname Switch-1
+no ip routing
+vlan 10
+ name Sales
+vlan 20
+ name Engineering
+!
+interface Fa0/1
+ no shutdown
+ switchport mode trunk
+!
+interface Fa0/2
+ no shutdown
+ switchport mode access
+!
+interface Fa0/3
+ no shutdown
+ switchport mode access
+!
+interface Fa0/4
+ no shutdown
+ switchport mode access
+!
+interface Fa0/5
+ no shutdown
+ switchport mode access
+!
+interface Fa0/6
+ no shutdown
+ switchport mode access
+!
+interface Fa0/7
+ no shutdown
+ switchport mode access
+!
+interface Fa0/8
+ no shutdown
+ switchport mode access
+!
+interface Fa0/9
+ no shutdown
+ switchport mode access
+!
+interface Fa0/10
+ no shutdown
+ switchport mode access
+!
+interface Fa0/11
+ no shutdown
+ switchport mode access
+!
+interface Fa0/12
+ no shutdown
+ switchport mode access
+!
+interface Fa0/13
+ no shutdown
+ switchport mode access
+!
+interface Fa0/14
+ no shutdown
+ switchport mode access
+!
+interface Fa0/15
+ no shutdown
+ switchport mode access
+!
+interface Fa0/16
+ no shutdown
+ switchport mode access
+!
+interface Fa0/17
+ no shutdown
+ switchport mode access
+!
+interface Fa0/18
+ no shutdown
+ switchport mode access
+!
+interface Fa0/19
+ no shutdown
+ switchport mode access
+!
+interface Fa0/20
+ no shutdown
+ switchport mode access
+!
+interface Fa0/21
+ no shutdown
+ switchport mode access
+!
+interface Fa0/22
+ no shutdown
+ switchport mode access
+!
+interface Fa0/23
+ no shutdown
+ switchport mode access
+!
+interface Fa0/24
+ no shutdown
+ switchport mode access
+!
+interface Gi0/1
+ no shutdown
+ switchport mode trunk
+!
+interface Gi0/2
+ no shutdown
+ switchport mode trunk
+!
+interface Console
+ no shutdown
+ switchport mode access
+end

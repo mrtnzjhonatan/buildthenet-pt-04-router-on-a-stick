@@ -1,0 +1,34 @@
+Current configuration : 1842 bytes
+version 15.0
+service timestamps debug datetime msec
+service timestamps log datetime msec
+hostname Router-1
+!
+interface Gi0/0
+ no shutdown
+ switchport mode trunk
+!
+interface Gi0/1
+ no shutdown
+!
+interface Gi0/2
+ no shutdown
+!
+interface Se0/0/0
+ no shutdown
+!
+interface Se0/0/1
+ no shutdown
+!
+interface Console
+ no shutdown
+ switchport mode access
+!
+interface Gi0/0.10
+ no shutdown
+ encapsulation dot1q
+!
+interface Gi0/0.20
+ no shutdown
+ encapsulation dot1q
+end
